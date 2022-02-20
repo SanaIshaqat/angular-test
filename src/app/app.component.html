@@ -1,0 +1,46 @@
+<h1>{{ title }}</h1>
+<nav class="navbar">
+  <input
+    class="form-control"
+    type="text"
+    name="name"
+    [(ngModel)]="name"
+    (ngModelChange)="Search()"
+    placeholder="Find Customers"
+  />
+ <button (click)="sort('name')">Sort</button>
+ <!-- <fa-icon [icon]="['far', 'sort']"></fa-icon> -->
+</nav>
+
+<div class="container">
+  <div *ngFor="let user of users | orderBy: key:reverse |paginate: {itemsPerPage: 6, currentPage: p};">
+    <div class="user">
+      <img
+        variant="top"
+        src="https://picsum.photos/200/300"
+        alt="{{ user.email }}"
+      />
+      <h3 class="card-title">{{ user.name }}</h3>
+      <h4>@{{ user.username }}</h4>
+      <div class="user-info">
+        <p>
+          {{ user.company.catchPhrase }}
+        </p>
+        <h4>
+          <fa-icon [icon]="['far', 'envelope']"></fa-icon>{{ user.email }}
+        </h4>
+        <h4>
+          <fa-icon [icon]="['far', 'map']"></fa-icon>{{ user.address.street }}
+        </h4>
+        <h4>No. {{ user.phone }}</h4>
+        <h4>Web: {{ user.website }}</h4>
+        <h4>
+          <fa-icon [icon]="['far', 'building']"></fa-icon
+          >{{ user.company.name }}
+        </h4>
+        <!-- <h4><fa-icon class="icons" [icon]="['far','phone']"></fa-icon>{{ user.company.bs }}</h4> -->
+      </div>
+    </div>
+  </div>
+</div>
+<pagination-controls (pageChange)="p=$event"></pagination-controls>

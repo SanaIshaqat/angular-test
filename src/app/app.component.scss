@@ -1,0 +1,63 @@
+header {
+    background-color: rgb(20, 56, 56);
+}
+h1{
+  color: rgb(14, 14, 119);
+  margin:1rem 10rem;
+
+}
+button{
+  margin:1rem 10rem;
+}
+input{
+  margin:1rem 10rem;
+}
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    color: rgb(71, 70, 70);
+    margin: auto;
+    justify-content: center;
+    margin-bottom: 1rem;
+    margin-top: 5rem;
+
+  }
+  .user {
+    width: 350px;
+        margin: 0.75rem;
+        background-color: #dce6fa99;
+        border-radius: 10px;
+  }
+ 
+  .user img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .card-title{
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+    color: rgb(14, 14, 119);
+  }
+  .user-info{
+      align-items: center;
+      justify-content: space-between;
+      margin: 0.25rem;
+  }
+  .user h4{
+      margin:0.5rem 0.5rem;
+      height: 25px;
+      overflow: hidden;
+      font-size: 17.25px
+  }
+  .user p{
+    margin:0.5rem 0.5rem;
+  }
+fa-icon {
+  margin-right: 0.5rem;
+  color: rgb(14, 14, 119);
+}
